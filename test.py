@@ -53,3 +53,14 @@ class TestStock(TestCase):
     def test_suma(self):
         r = suma(1, 2)
         self.assertEqual(r, 3)
+
+
+# Path: stock_controller.py
+if __name__ == '__main__':
+    Tester = TestStock()
+    Tester.test_all_stock()
+    Tester.test_vehicle()
+    Tester.test_create_vehicle()
+    Tester.test_create_stock()
+    Tester.test_delete_stock()
+    Tester.test_suma()
