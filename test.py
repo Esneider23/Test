@@ -1,6 +1,6 @@
 from unittest import TestCase
 from stock_controller import stock, delete_stock, vehicle, create_stock, create_vehicle
-from app import connection
+from app import connection, suma
 import json
 
 
@@ -49,3 +49,7 @@ class TestStock(TestCase):
         r = delete_stock(connection(), 144)
         result = json.loads(r)
         self.assertEqual(result['message'], 'Stock deleted')
+
+    def test_suma(self):
+        r = suma(1, 2)
+        self.assertEqual(r, 3)
